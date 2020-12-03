@@ -1,6 +1,7 @@
 var form = document.forms[0];
 var newBadWords = document.querySelector('#newBadWords');
 var add = document.querySelector('#add');
+var reset = document.querySelector('#reset');
 var arr = [];
 var cenzor = document.querySelector('#cenzor');
 var area = document.querySelector('#checkCenzor');
@@ -19,6 +20,11 @@ add.addEventListener('click', function () {
         alert('Заповніть всі поля');
         badWords.style.border = '1px solid red';
     }
+});
+reset.addEventListener('click', function () {
+    form.reset();
+    newBadWords.innerHTML = '';
+    area.value = '';
 });
 cenzor.addEventListener('click', function () {
     arr.forEach(function (el) { return area.value = area.value.toLocaleLowerCase().replace(el, '*'.repeat(el.length)); });

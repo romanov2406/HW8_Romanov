@@ -1,6 +1,7 @@
 let form: HTMLFormElement = document.forms[0];
 let newBadWords: HTMLAnchorElement = document.querySelector('#newBadWords');
 let add: HTMLButtonElement = document.querySelector('#add');
+let reset: HTMLButtonElement = document.querySelector('#reset');
 let arr: string[] = [];
 let cenzor: HTMLButtonElement = document.querySelector('#cenzor');
 let area: HTMLTextAreaElement = document.querySelector('#checkCenzor');
@@ -22,7 +23,12 @@ add.addEventListener('click', function (): void {
     }
 
 });
+reset.addEventListener('click',function(){
+form.reset();
+newBadWords.innerHTML = '';
+area.value = '';
 
+});
 cenzor.addEventListener('click', function (): void {
     arr.forEach((el: string) => area.value = area.value.toLocaleLowerCase().replace(el, '*'.repeat(el.length)));
 });
