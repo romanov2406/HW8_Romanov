@@ -13,6 +13,7 @@ add.addEventListener('click', function () {
         arr.push(form.badWords.value.toLowerCase());
         form.reset();
         console.log(str);
+        badWords.style.border = '1px solid green';
     }
     else {
         alert('Заповніть всі поля');
