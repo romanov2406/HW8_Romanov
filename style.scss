@@ -1,0 +1,68 @@
+.container {
+    display: flex;
+    flex-direction: column;
+    width: 45%;
+    margin: 100px auto;
+
+    .badWords {
+        font-weight: bold;
+        font-family: 'Amatic SC', cursive;
+        font-size: 30px;
+    }
+    #newBadWords{
+        font-size: 35px;
+        color: red;
+    }
+
+    .addBadWords {
+        padding: 2px 0 10px 0;
+        display: flex;
+        justify-content: space-between;
+
+        form {
+            width: 70%;
+            margin-right: 5px;
+
+            input {
+                width: 100%;
+                height: 30px;
+                outline: none;
+            }
+        }
+
+        button {
+            width: 13%;
+            cursor: pointer;
+            outline: none;
+            border: none;
+            border-radius: 3px;
+            color: white;
+            font-weight: bold;
+            font-size: 14px;
+        }
+
+        #add {
+            background-color: rgb(175, 175, 39);
+        }
+
+        #reset {
+            background-color: red;
+        }
+    }
+
+    #checkCenzor {
+        outline: none;
+    }
+
+    #cenzor {
+        margin-top: 10px;
+        height: 35px;
+        cursor: pointer;
+        border: none;
+        outline: none;
+        background-color: green;
+        color: white;
+        font-weight: bold;
+        border-radius: 4px;
+    }
+}
